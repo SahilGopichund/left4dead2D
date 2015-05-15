@@ -48,6 +48,7 @@ void GameScreen::update()
 void GameScreen::draw()
 {
 	// Draw map
+	MapDrawBG(20,20,0,0,DISPLAY_WIDTH,DISPLAY_HEIGHT);
 
 	//draw objects
 	for (std::list<GameEntity*>::iterator iter = objects.begin(); iter != objects.end(); iter++)

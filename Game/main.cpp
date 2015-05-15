@@ -134,6 +134,10 @@ int main(int argc, char **argv)
 	//Mouse cursor
 	cursor = al_create_mouse_cursor(cursorImage, 16, 16);
 	al_set_mouse_cursor(display, cursor);
+
+	//Load Map
+	if (MapLoad("testmap.FMP.", 1))
+		return -5;
 	
 	GameScreen game(playerSpriteSheet, bulletSpriteSheet, meleeZombieSpriteSheet);
 	ScreenManager::getInstance().addGameScreen(&game);
@@ -292,6 +296,9 @@ int main(int argc, char **argv)
 	al_destroy_bitmap(meleeZombieSpriteSheet);
 	//Destroy font
 	al_destroy_font(font_72);
+
+	//Unload map
+	MapFreeMem();
 	return 0;
 }
 

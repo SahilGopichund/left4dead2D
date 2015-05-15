@@ -19,6 +19,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <cstdio>
+#include "mappy_A5.h"
 
 
 class GameScreen
