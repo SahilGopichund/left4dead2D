@@ -136,7 +136,7 @@ int main(int argc, char **argv)
 	al_set_mouse_cursor(display, cursor);
 
 	//Load Map
-	if (MapLoad("testmap.FMP.", 1))
+	if (MapLoad("map1.FMP.", 1))
 		return -5;
 	
 	GameScreen game(playerSpriteSheet, bulletSpriteSheet, meleeZombieSpriteSheet);
